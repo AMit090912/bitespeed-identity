@@ -27,7 +27,7 @@ def identify(request):
 
         return Response({
             "contact": {
-                "primaryContatctId": new_contact.id,
+                "primaryContactId": new_contact.id,
                 "emails": [email] if email else [],
                 "phoneNumbers": [phone] if phone else [],
                 "secondaryContactIds": [],

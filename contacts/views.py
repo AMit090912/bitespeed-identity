@@ -5,7 +5,7 @@ from django.db import transaction
 from .models import Contact
 
 
-@api_view(["POST"])
+@api_view(["GET", "POST"])
 @transaction.atomic
 def identify(request):
     email = request.data.get("email")

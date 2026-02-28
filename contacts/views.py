@@ -8,6 +8,8 @@ from .models import Contact
 @api_view(["GET", "POST"])
 @transaction.atomic
 def identify(request):
+    if request.method == "GET":
+        return Response({"message": "API is live uuse POST method."})
     email = request.data.get("email")
     phone = request.data.get("phoneNumber")
 
